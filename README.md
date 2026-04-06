@@ -1,7 +1,7 @@
 # Enterprise AI Governance Playbook
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/simaba/enterprise-ai-governance-playbook)](https://github.com/simaba/enterprise-ai-governance-playbook/commits/main)
+[![Last Commit](https://img.shields.io/github/last-commit/simaba/governance-playbook)](https://github.com/simaba/governance-playbook/commits/main)
 
 An end-to-end operating playbook for enterprise AI — from intake and prioritisation through release, monitoring, and continuous improvement.
 
@@ -60,9 +60,9 @@ flowchart LR
 
 ## Companion repositories
 
-- **[AI Release Governance Framework](https://github.com/simaba/ai-release-governance-framework)** — deep-dive on release gates
-- **[AI Release Readiness Checklist](https://github.com/simaba/ai-release-readiness-checklist)** — operational checklist for the Release phase
-- **[LLM-powered Lean Six Sigma](https://github.com/simaba/LLM-powered-Lean-Six-Sigma)** — AI tool for the Improvement phase
+- **[AI Release Governance Framework](https://github.com/simaba/release-governance)** — deep-dive on release gates
+- **[AI Release Readiness Checklist](https://github.com/simaba/release-checklist)** — operational checklist for the Release phase
+- **[LLM-powered Lean Six Sigma](https://github.com/simaba/lean-ai-ops)** — AI tool for the Improvement phase
 
 ---
 
@@ -72,15 +72,15 @@ This repository is part of a connected toolkit for responsible AI operations:
 
 | Repository | Purpose |
 |-----------|---------|
-| [Enterprise AI Governance Playbook](https://github.com/simaba/enterprise-ai-governance-playbook) | End-to-end AI operating model from intake to improvement |
-| [AI Release Governance Framework](https://github.com/simaba/ai-release-governance-framework) | Risk-based release gates for AI systems |
-| [AI Release Readiness Checklist](https://github.com/simaba/ai-release-readiness-checklist) | Risk-tiered pre-release checklists with CLI tool |
-| [AI Accountability Design Patterns](https://github.com/simaba/ai-accountability-design-patterns) | Patterns for human oversight and escalation |
-| [Multi-Agent Governance Framework](https://github.com/simaba/multi-agent-governance-framework) | Roles, authority, and escalation for agent systems |
-| [Multi-Agent Orchestration Patterns](https://github.com/simaba/multi-agent-orchestration-patterns) | Sequential, parallel, and feedback-loop patterns |
-| [AI Agent Evaluation Framework](https://github.com/simaba/ai-agent-evaluation-framework) | System-level evaluation across 5 dimensions |
-| [Agent System Simulator](https://github.com/simaba/agent-system-simulator) | Runnable multi-agent simulator with governance controls |
-| [LLM-powered Lean Six Sigma](https://github.com/simaba/LLM-powered-Lean-Six-Sigma) | AI copilot for structured process improvement |
+| [Enterprise AI Governance Playbook](https://github.com/simaba/governance-playbook) | End-to-end AI operating model from intake to improvement |
+| [AI Release Governance Framework](https://github.com/simaba/release-governance) | Risk-based release gates for AI systems |
+| [AI Release Readiness Checklist](https://github.com/simaba/release-checklist) | Risk-tiered pre-release checklists with CLI tool |
+| [AI Accountability Design Patterns](https://github.com/simaba/accountability-patterns) | Patterns for human oversight and escalation |
+| [Multi-Agent Governance Framework](https://github.com/simaba/multi-agent-governance) | Roles, authority, and escalation for agent systems |
+| [Multi-Agent Orchestration Patterns](https://github.com/simaba/agent-orchestration) | Sequential, parallel, and feedback-loop patterns |
+| [AI Agent Evaluation Framework](https://github.com/simaba/agent-eval) | System-level evaluation across 5 dimensions |
+| [Agent System Simulator](https://github.com/simaba/agent-simulator) | Runnable multi-agent simulator with governance controls |
+| [LLM-powered Lean Six Sigma](https://github.com/simaba/lean-ai-ops) | AI copilot for structured process improvement |
 
 ---
 
