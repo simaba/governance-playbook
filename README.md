@@ -3,23 +3,28 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Last Commit](https://img.shields.io/github/last-commit/simaba/governance-playbook)](https://github.com/simaba/governance-playbook/commits/main)
 
-An end-to-end operating playbook for enterprise AI — from intake and prioritisation through release, monitoring, and continuous improvement.
+An end-to-end operating playbook for enterprise AI, from intake and prioritization through release, monitoring, and continuous improvement.
 
----
+## Choose this repo when
 
-## Why this exists
+Use this repository when you need the **organizational operating model** for AI:
 
-Many organisations experiment with AI without a disciplined operating model. Projects are approved without clear criteria, released without structured gates, and abandoned without retrospectives.
+- intake and prioritization
+- lifecycle governance
+- monitoring and improvement loops
+- templates for recurring governance work
 
-This playbook connects the full lifecycle into a coherent operating system — embedding Lean Six Sigma discipline into AI governance.
+If you need a **specific release-stage framework**, use [`release-governance`](https://github.com/simaba/release-governance).
 
----
+If you need a **working validator**, use [`release-checklist`](https://github.com/simaba/release-checklist).
+
+If you need a **starter template repo**, use [`regulated-ai`](https://github.com/simaba/regulated-ai).
 
 ## Playbook lifecycle
 
 ```mermaid
 flowchart LR
-    A[Intake] --> B[Prioritisation]
+    A[Intake] --> B[Prioritization]
     B --> C[Delivery governance]
     C --> D[Release readiness]
     D --> E[Post-release monitoring]
@@ -27,16 +32,14 @@ flowchart LR
     F --> A
 ```
 
----
-
-## What's included
+## What is included
 
 ### Playbook phases
 
 | Phase | Document |
-|-------|---------|
+|---|---|
 | Intake | `playbook/intake.md` |
-| Prioritisation | `playbook/prioritization.md` |
+| Prioritization | `playbook/prioritization.md` |
 | Release | `playbook/release.md` |
 | Monitoring | `playbook/monitoring.md` |
 | Improvement | `playbook/improvement.md` |
@@ -44,44 +47,28 @@ flowchart LR
 ### Lean Six Sigma integration
 
 | Topic | Document |
-|-------|---------|
+|---|---|
 | AI operating model | `lean-six-sigma/ai-operating-model.md` |
 | Metrics and CTQs | `lean-six-sigma/metrics-and-ctqs.md` |
 
 ### Templates
 
 | Template | Use for |
-|----------|--------|
+|---|---|
 | `templates/intake-form.md` | Capturing AI project requests |
 | `templates/prioritization-matrix.csv` | Scoring and ranking initiatives |
 | `templates/improvement-review.md` | Post-release retrospectives |
 
----
-
-## Companion repositories
-
-- **[AI Release Governance Framework](https://github.com/simaba/release-governance)** — deep-dive on release gates
-- **[AI Release Readiness Checklist](https://github.com/simaba/release-checklist)** — operational checklist for the Release phase
-- **[LLM-powered Lean Six Sigma](https://github.com/simaba/lean-ai-ops)** — AI tool for the Improvement phase
-
----
-
 ## Related repositories
 
-This repository is part of a connected toolkit for responsible AI operations:
-
-| Repository | Purpose |
-|-----------|---------|
-| [Enterprise AI Governance Playbook](https://github.com/simaba/governance-playbook) | End-to-end AI operating model from intake to improvement |
-| [AI Release Governance Framework](https://github.com/simaba/release-governance) | Risk-based release gates for AI systems |
-| [AI Release Readiness Checklist](https://github.com/simaba/release-checklist) | Risk-tiered pre-release checklists with CLI tool |
-| [AI Accountability Design Patterns](https://github.com/simaba/accountability-patterns) | Patterns for human oversight and escalation |
-| [Multi-Agent Governance Framework](https://github.com/simaba/multi-agent-governance) | Roles, authority, and escalation for agent systems |
-| [Multi-Agent Orchestration Patterns](https://github.com/simaba/agent-orchestration) | Sequential, parallel, and feedback-loop patterns |
-| [AI Agent Evaluation Framework](https://github.com/simaba/agent-eval) | System-level evaluation across 5 dimensions |
-| [Agent System Simulator](https://github.com/simaba/agent-simulator) | Runnable multi-agent simulator with governance controls |
-| [LLM-powered Lean Six Sigma](https://github.com/simaba/lean-ai-ops) | AI copilot for structured process improvement |
+| Repository | What it adds |
+|---|---|
+| [release-governance](https://github.com/simaba/release-governance) | Release-stage governance framework |
+| [release-checklist](https://github.com/simaba/release-checklist) | CLI validation for release-readiness configs |
+| [nist-rmf-guide](https://github.com/simaba/nist-rmf-guide) | NIST AI RMF implementation guide |
+| [regulated-ai](https://github.com/simaba/regulated-ai) | Starter template repo |
+| [lean-ai-ops](https://github.com/simaba/lean-ai-ops) | Process-improvement app and analytics |
 
 ---
 
-*Shared in a personal capacity. Open to collaborations and feedback — connect on [LinkedIn](https://linkedin.com/in/simaba) or [Medium](https://medium.com/@bagheri.sima).*
+*Shared in a personal capacity. Open to collaborations and feedback via [LinkedIn](https://linkedin.com/in/simaba) or [Medium](https://medium.com/@bagheri.sima).*
