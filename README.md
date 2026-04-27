@@ -13,6 +13,7 @@ Use this repository when you need the **organizational operating model** for AI:
 - lifecycle governance
 - monitoring and improvement loops
 - templates for recurring governance work
+- governance forums, decision rights, and escalation paths
 
 If you need a **specific release-stage framework**, use [`release-governance`](https://github.com/simaba/release-governance).
 
@@ -44,6 +45,13 @@ flowchart LR
 | Monitoring | `playbook/monitoring.md` |
 | Improvement | `playbook/improvement.md` |
 
+### Operating model artifacts
+
+| Artifact | Use for |
+|---|---|
+| `templates/ai-governance-operating-model.md` | Defining governance forums, decision rights, lifecycle controls, metrics, and escalation rules |
+| `examples/sample-ai-governance-operating-model.md` | Seeing a filled generic example of the operating model in practice |
+
 ### Lean Six Sigma integration
 
 | Topic | Document |
@@ -58,6 +66,15 @@ flowchart LR
 | `templates/intake-form.md` | Capturing AI project requests |
 | `templates/prioritization-matrix.csv` | Scoring and ranking initiatives |
 | `templates/improvement-review.md` | Post-release retrospectives |
+| `templates/ai-governance-operating-model.md` | Designing an AI governance operating model |
+
+## Relationship to the release repos
+
+| Repository | Role |
+|---|---|
+| `governance-playbook` | portfolio-level AI operating model across intake, prioritization, release, monitoring, and improvement |
+| `release-governance` | release-stage gate framework and release decision artifacts |
+| `release-checklist` | executable YAML validator for release-readiness checks |
 
 ## Related repositories
 
