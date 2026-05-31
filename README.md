@@ -21,6 +21,10 @@ If you need a **working validator**, use [`release-checklist`](https://github.co
 
 If you need a **starter template repo**, use [`regulated-ai`](https://github.com/simaba/regulated-ai).
 
+## Maturity
+
+This is a **practitioner playbook**. It is intended to help teams structure operating-model discussions, governance routines, decision rights, escalation paths, and continuous-improvement loops. It is not a certified governance system or a substitute for organization-specific legal, compliance, safety, privacy, or security review.
+
 ## Playbook lifecycle
 
 ```mermaid
@@ -75,6 +79,12 @@ flowchart LR
 | `governance-playbook` | portfolio-level AI operating model across intake, prioritization, release, monitoring, and improvement |
 | `release-governance` | release-stage gate framework and release decision artifacts |
 | `release-checklist` | executable YAML validator for release-readiness checks |
+
+## Scope and disclaimer
+
+This repository is shared in a personal capacity. It is not legal advice, compliance certification, regulatory approval, safety certification, or official guidance from NIST, the EU, ISO, or any employer.
+
+References to AI governance, risk management, release readiness, decision rights, and operating models are practitioner examples. Always adapt them to the specific organization, system risk, jurisdiction, and internal approval structure.
 
 ## Related repositories
 
