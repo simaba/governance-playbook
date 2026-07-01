@@ -55,6 +55,7 @@ flowchart LR
 |---|---|
 | `templates/ai-governance-operating-model.md` | Defining governance forums, decision rights, lifecycle controls, metrics, and escalation rules |
 | `examples/sample-ai-governance-operating-model.md` | Seeing a filled generic example of the operating model in practice |
+| [`docs/risk-vocabulary.md`](docs/risk-vocabulary.md) | Keeping system risk tiers, scenario severity, control status, evaluation outcomes, and release decisions distinct |
 
 ### Lean Six Sigma integration
 
