@@ -1,102 +1,247 @@
 # Enterprise AI Governance Playbook
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/simaba/governance-playbook)](https://github.com/simaba/governance-playbook/commits/main)
 
-An end-to-end operating playbook for enterprise AI, from intake and prioritization through release, monitoring, and continuous improvement.
+A practitioner playbook for designing AI governance as a decision and evidence service—not a layer of committees, generic risk tiers, and approval templates.
 
-## Choose this repo when
+The repository covers the organizational system around AI work: intake, routing, prioritization, lifecycle decisions, evidence, release, monitoring, incident response, exceptions, improvement, and retirement.
 
-Use this repository when you need the **organizational operating model** for AI:
+## The operating-model question
 
-- intake and prioritization
-- lifecycle governance
-- monitoring and improvement loops
-- templates for recurring governance work
-- governance forums, decision rights, and escalation paths
+A credible governance model should let an organization answer:
 
-If you need a **specific release-stage framework**, use [`release-governance`](https://github.com/simaba/release-governance).
+- Which recurring AI decisions exist?
+- Who is authorized to make each one?
+- Which evidence and affected-party input are required?
+- How quickly must the decision be made to remain useful?
+- Which path is proportional to the authority, consequence, data, and evidence maturity?
+- How are conditions, exceptions, dissent, and residual risk recorded?
+- Who verifies follow-through?
+- Which change or incident invalidates the decision?
+- How is governance burden measured and removed?
 
-If you need a **working validator**, use [`release-checklist`](https://github.com/simaba/release-checklist).
+Naming an intake forum, release committee, and monitoring meeting does not answer those questions.
 
-If you need a **starter template repo**, use [`regulated-ai`](https://github.com/simaba/regulated-ai).
+## Start here
 
-## Maturity
+| Artifact | Use it for |
+|---|---|
+| [`docs/operating-model-design.md`](docs/operating-model-design.md) | designing decision inventory, governance service contracts, proportional paths, forums, ownership, and metrics |
+| [`templates/ai-governance-operating-model.md`](templates/ai-governance-operating-model.md) | documenting an organization-specific operating model |
+| [`examples/sample-ai-governance-operating-model.md`](examples/sample-ai-governance-operating-model.md) | reviewing a fictional filled example |
+| [`docs/risk-vocabulary.md`](docs/risk-vocabulary.md) | separating system risk, finding severity, control state, evaluation result, and release decision |
+| [`release-governance`](https://github.com/simaba/release-governance) | detailed release-stage evidence and decision semantics |
 
-This is a **practitioner playbook**. It is intended to help teams structure operating-model discussions, governance routines, decision rights, escalation paths, and continuous-improvement loops. It is not a certified governance system or a substitute for organization-specific legal, compliance, safety, privacy, or security review.
+## Design sequence
 
-## Playbook lifecycle
-
-```mermaid
-flowchart LR
-    A[Intake] --> B[Prioritization]
-    B --> C[Delivery governance]
-    C --> D[Release readiness]
-    D --> E[Post-release monitoring]
-    E --> F[Improvement loops]
-    F --> A
+```text
+scope and objectives
+        ↓
+recurring decision inventory
+        ↓
+decision rights and affected-party input
+        ↓
+proportional governance paths
+        ↓
+intake, evidence, decision, and follow-through contracts
+        ↓
+forums only where joint authority is needed
+        ↓
+metrics, cases, and operating-model improvement
 ```
 
-## What is included
+Starting with committees usually reproduces the existing organization chart rather than designing the decisions AI systems need.
 
-### Playbook phases
+## 1. Decision inventory
 
-| Phase | Document |
+List decisions across the lifecycle:
+
+- accept, redirect, or reject a use case;
+- authorize discovery, prototype, pilot, expansion, or release;
+- approve data, vendor, model, tool, permission, or architecture boundaries;
+- grant an exception;
+- accept residual risk;
+- hold, roll back, contain, or retire;
+- renew an approval after material change.
+
+For each decision, record owner, evidence, required reviewers, useful-by window, outcome vocabulary, exception path, record, and revisit trigger.
+
+A forum with no distinct decision right is usually a status meeting.
+
+## 2. Proportional paths
+
+Do not let one low/medium/high label decide the entire governance route. Consider:
+
+- consequence and reversibility;
+- affected people and rights;
+- data sensitivity, scale, region, and retention;
+- read, write, communication, financial, code, or physical authority;
+- external visibility and operational criticality;
+- evidence and model maturity;
+- supplier and dependency concentration;
+- ability to monitor, stop, roll back, and remediate;
+- legal, contractual, and policy obligations.
+
+Possible paths include self-service validation, lightweight peer review, specialist control review, cross-functional decision, accountable-risk-owner decision, and prohibited/redesign.
+
+Proportionality should reduce low-value review without weakening non-negotiable controls.
+
+## 3. Governance as a service
+
+Teams interact with governance through four contracts.
+
+### Intake
+
+- eligibility and exclusions;
+- minimum information;
+- incomplete-request handling;
+- routing and response objective;
+- sensitive-information boundary.
+
+### Evidence
+
+- propositions that must be supported;
+- acceptable sources, methods, and provenance;
+- freshness and invalidation;
+- reviewer qualifications;
+- uncertainty and disagreement;
+- reuse, storage, access, and retention.
+
+### Decision
+
+- outcome vocabulary;
+- authority and delegation;
+- conditions, exceptions, and residual risk;
+- turnaround objective;
+- effective date, expiry, and renewal.
+
+### Follow-through
+
+- actions, owners, and dates;
+- verification of conditions;
+- escalation, incident, and stop path;
+- closure evidence;
+- feedback into policy, controls, tools, staffing, and training.
+
+## 4. Forum design
+
+For each forum, define:
+
+- the decision it alone is authorized to make;
+- eligible scope;
+- decision members versus evidence and challenge members;
+- pre-read and completeness requirements;
+- decision outcomes;
+- dissent and escalation;
+- service objective;
+- decision record and follow-through;
+- health review and retirement criteria.
+
+Attendance is not approval. Record who made the decision, under what authority, with which evidence and conditions.
+
+## 5. Ownership and assurance
+
+Keep these roles distinct where applicable:
+
+- product or use-case owner;
+- technical, data, model, tool, and platform owners;
+- control owners;
+- independent review or assurance;
+- release and residual-risk decision owner;
+- incident and remediation owner;
+- redress and correction owner;
+- affected-user or representative input.
+
+Review and challenge functions should not quietly become owners of delivery controls, and product owners should not be given sole authority to accept every category of risk.
+
+## 6. Lifecycle
+
+| Stage | Decision emphasis |
 |---|---|
-| Intake | `playbook/intake.md` |
-| Prioritization | `playbook/prioritization.md` |
-| Release | `playbook/release.md` |
-| Monitoring | `playbook/monitoring.md` |
-| Improvement | `playbook/improvement.md` |
+| Intake | route, reject, request discovery, assign owner |
+| Discovery | continue, stop, redesign, define evidence plan |
+| Prototype | test feasibility and failure observability |
+| Pilot | authorize bounded population, data, tools, and authority |
+| Expansion / release | evaluate outcomes, controls, operations, and residual risks |
+| Operation | continue, condition, adjust, pause, roll back, or renew |
+| Retirement | remove access, data, memory, dependencies, and user obligations |
 
-### Operating model artifacts
+Each stage should define evidence, hard gates, owner, outcome, follow-through, expiry, and invalidation triggers.
 
-| Artifact | Use for |
+## 7. Metrics that diagnose governance
+
+Avoid treating approval rate or gate pass rate as evidence of governance quality.
+
+Useful measures include:
+
+### Flow and capacity
+
+- time waiting for evidence, review, or decision authority;
+- decisions made after their useful-by date;
+- rework caused by unclear requirements;
+- workload by route and expertise;
+- duplicate reviews.
+
+### Evidence and decision quality
+
+- stale or missing evidence;
+- reviewer disagreement and adjudication;
+- decisions invalidated by untracked change;
+- conditions and exceptions past expiry;
+- residual risks without current owner.
+
+### Outcomes and control
+
+- incidents and recurrence by control path;
+- stop, rollback, and remediation performance;
+- user correction, complaint, appeal, or redress outcomes;
+- orphaned systems, credentials, owners, and approvals;
+- recurring exceptions that indicate a broken standard path.
+
+Metrics should state their decision use and gaming risk. More reported incidents can initially indicate better detection rather than worse governance.
+
+## 8. Improvement using real cases
+
+Periodic review should examine decisions and incidents, not only template completion.
+
+Ask:
+
+- Was the decision made at the right level and in time to matter?
+- Was the evidence current, relevant, and reusable?
+- Which uncertainty, affected-party input, or dissent was hidden?
+- Which control created false assurance or unnecessary burden?
+- Which exception repeated?
+- Which forum or artifact could be removed?
+- What policy, staffing, tooling, or ownership change follows?
+
+Improvement is meaningful when it changes the operating system, not only when teams receive another reminder to complete fields.
+
+## Repository map
+
+| Area | Content |
 |---|---|
-| `templates/ai-governance-operating-model.md` | Defining governance forums, decision rights, lifecycle controls, metrics, and escalation rules |
-| `examples/sample-ai-governance-operating-model.md` | Seeing a filled generic example of the operating model in practice |
-| [`docs/risk-vocabulary.md`](docs/risk-vocabulary.md) | Keeping system risk tiers, scenario severity, control status, evaluation outcomes, and release decisions distinct |
+| `playbook/` | lifecycle guidance for intake, prioritization, release, monitoring, and improvement |
+| `templates/` | intake, operating-model, prioritization, and review artifacts |
+| `examples/` | fictional worked examples |
+| `docs/` | operating-model design and risk vocabulary |
+| `lean-six-sigma/` | process and measurement views for governance operations |
 
-### Lean Six Sigma integration
+## Maturity and scope
 
-| Topic | Document |
-|---|---|
-| AI operating model | `lean-six-sigma/ai-operating-model.md` |
-| Metrics and CTQs | `lean-six-sigma/metrics-and-ctqs.md` |
+This is a practitioner playbook for operating-model design. It is not a certified governance system, legal determination, compliance assessment, safety case, or official guidance from NIST, ISO, the EU, or any employer.
 
-### Templates
-
-| Template | Use for |
-|---|---|
-| `templates/intake-form.md` | Capturing AI project requests |
-| `templates/prioritization-matrix.csv` | Scoring and ranking initiatives |
-| `templates/improvement-review.md` | Post-release retrospectives |
-| `templates/ai-governance-operating-model.md` | Designing an AI governance operating model |
-
-## Relationship to the release repos
-
-| Repository | Role |
-|---|---|
-| `governance-playbook` | portfolio-level AI operating model across intake, prioritization, release, monitoring, and improvement |
-| `release-governance` | release-stage gate framework and release decision artifacts |
-| `release-checklist` | executable YAML validator for release-readiness checks |
-
-## Scope and disclaimer
-
-This repository is shared in a personal capacity. It is not legal advice, compliance certification, regulatory approval, safety certification, or official guidance from NIST, the EU, ISO, or any employer.
-
-References to AI governance, risk management, release readiness, decision rights, and operating models are practitioner examples. Always adapt them to the specific organization, system risk, jurisdiction, and internal approval structure.
+Adapt the decisions, evidence, authority, forums, and metrics to the actual organization, system, affected people, jurisdiction, and risk.
 
 ## Related repositories
 
-| Repository | What it adds |
+| Repository | Distinct role |
 |---|---|
-| [release-governance](https://github.com/simaba/release-governance) | Release-stage governance framework |
-| [release-checklist](https://github.com/simaba/release-checklist) | CLI validation for release-readiness configs |
-| [nist-rmf-guide](https://github.com/simaba/nist-rmf-guide) | NIST AI RMF implementation guide |
-| [regulated-ai](https://github.com/simaba/regulated-ai) | Starter template repo |
-| [lean-ai-ops](https://github.com/simaba/lean-ai-ops) | Process-improvement app and analytics |
+| [`release-governance`](https://github.com/simaba/release-governance) | release evidence and accountable decisions |
+| [`release-checklist`](https://github.com/simaba/release-checklist) | executable configuration validation |
+| [`accountability-patterns`](https://github.com/simaba/accountability-patterns) | ownership, human review, provenance, explanation, and redress |
+| [`nist-rmf-guide`](https://github.com/simaba/nist-rmf-guide) | practitioner navigation of NIST AI RMF |
+| [`regulated-ai`](https://github.com/simaba/regulated-ai) | starter repository structure |
 
 ---
 
-*Shared in a personal capacity. Open to collaborations and feedback via [LinkedIn](https://linkedin.com/in/simaba) or [Medium](https://medium.com/@bagheri.sima).*
+*Maintained by [Sima Bagheri](https://github.com/simaba).*
