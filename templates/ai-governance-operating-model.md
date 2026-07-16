@@ -1,113 +1,178 @@
-# AI Governance Operating Model
+# AI Governance Operating Model Template
 
-Use this template to define how an organization governs AI from idea intake through release, monitoring, and continuous improvement.
+Use this template to define how the organization makes, records, executes, and revisits AI-related decisions. Do not begin by naming committees. Begin with recurring decisions, evidence, authority, and follow-through.
 
-## 1. Operating Model Summary
+## 1. Purpose and scope
 
-| Field | Value |
+| Field | Definition |
 |---|---|
-| Organization / team | `[TBD]` |
-| Scope | `[enterprise / business unit / product line / platform]` |
+| Organization / unit | `[TBD]` |
+| Systems and lifecycle stages in scope | `[TBD]` |
+| Explicit exclusions | `[TBD]` |
+| Operating-model owner | `[TBD]` |
 | Effective date | `[TBD]` |
-| Owner | `[TBD]` |
-| Review cadence | `[monthly / quarterly / biannual]` |
-| Primary frameworks referenced | `[NIST AI RMF / ISO 42001 / EU AI Act / internal policy]` |
+| Next design review | `[TBD]` |
+| Authoritative policies and sources | `[TBD]` |
 
-## 2. Governance Principles
+### Objectives
 
-Define the principles that guide AI decisions.
+- Which decisions should become more timely, consistent, or accountable?
+- Which harms, control failures, or operating burdens should the model reduce?
+- Which responsibilities remain outside this operating model?
 
-- **Accountability:** `[who owns system outcomes]`
-- **Traceability:** `[what evidence must be retained]`
-- **Risk proportionality:** `[how controls scale by risk tier]`
-- **Human oversight:** `[where human review is mandatory]`
-- **Continuous improvement:** `[how post-release learning feeds back into governance]`
+## 2. Decision inventory
 
-## 3. Scope of AI Systems
+| Decision ID | Decision | Lifecycle stage | Accountable owner | Required reviewers / affected input | Useful-by window | Record | Revisit trigger |
+|---|---|---|---|---|---|---|---|
+| DEC-001 | accept, redirect, or reject a use case | intake | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` | scope or risk changes |
+| DEC-002 | authorize bounded pilot | pre-pilot | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` | tool, data, population, or evidence changes |
+| DEC-003 | expand, hold, roll back, or retire | operation | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` | incident, drift, control, or value trigger |
 
-### In scope
+For every decision, define the standard outcome vocabulary: approve, approve with conditions, hold, reject, defer, escalate, retire, or another controlled set.
 
-- `[TBD]`
+## 3. Proportional governance paths
 
-### Out of scope
+Define routing dimensions rather than relying only on one low/medium/high score.
 
-- `[TBD]`
-
-### System inventory expectations
-
-Every AI system should have:
-
-- named business owner
-- named technical owner
-- use-case description
-- risk tier
-- release status
-- model or vendor dependency
-- monitoring owner
-- review date
-
-## 4. Governance Forums and Decision Rights
-
-| Forum / role | Decision rights | Inputs required | Outputs |
-|---|---|---|---|
-| AI Intake Forum | `[accept / reject / request more info]` | intake form, use case summary | triage decision |
-| Prioritization Forum | `[rank / defer / escalate]` | impact score, risk score, effort estimate | prioritized portfolio |
-| Release Gate Review | `[approve / conditional / hold / reject]` | validation evidence, risk assessment, release plan | release decision |
-| Monitoring Review | `[continue / adjust / rollback / retire]` | production metrics, incidents, drift reports | improvement actions |
-
-## 5. Lifecycle Controls
-
-| Stage | Minimum controls | Required artifacts |
+| Dimension | Questions | Routing consequence |
 |---|---|---|
-| Intake | use-case definition, ownership, preliminary risk screen | intake form |
-| Prioritization | value, risk, feasibility, dependency scoring | prioritization matrix |
-| Delivery governance | milestone reviews, risk tracking, data governance | project RAID, model card draft |
-| Release readiness | validation, legal/compliance review, monitoring readiness | release gate review, checklist report |
-| Post-release monitoring | performance, drift, incidents, user feedback | monitoring dashboard, incident log |
-| Improvement / retirement | periodic review, remediation, decommissioning decision | improvement review or retirement note |
+| Consequence and reversibility | What is the worst credible effect and can it be reversed? | `[TBD]` |
+| People and rights | Who is affected, including non-users? | `[TBD]` |
+| Data | sensitivity, scale, provenance, region, retention | `[TBD]` |
+| Authority | read, draft, write, publish, decide, physical / financial action | `[TBD]` |
+| Externality | internal, public, legal, safety, financial, infrastructure | `[TBD]` |
+| Evidence maturity | exploratory, tested, validated, operationally observed | `[TBD]` |
+| Control and recovery | monitor, stop, roll back, remediate | `[TBD]` |
+| Obligations | legal, contractual, sector, internal policy | `[TBD]` |
 
-## 6. Risk Tiering
+### Paths
 
-| Tier | Definition | Example controls |
-|---|---|---|
-| Low | limited impact, internal use, reversible | technical review, basic monitoring |
-| Medium | customer-facing or operationally significant | governance review, model card, rollback plan |
-| High | regulated, safety-adjacent, hard to reverse, or high-impact | legal/compliance review, human oversight, red-team testing, formal sign-off |
+| Path | Eligibility | Review and evidence | Decision authority | Typical expiry |
+|---|---|---|---|---|
+| Self-service | `[TBD]` | automated validation + owner attestation | `[TBD]` | `[TBD]` |
+| Lightweight review | `[TBD]` | peer or control-owner review | `[TBD]` | `[TBD]` |
+| Specialist review | `[TBD]` | named domain / security / privacy / safety review | `[TBD]` | `[TBD]` |
+| Cross-functional decision | `[TBD]` | integrated evidence package | `[TBD]` | `[TBD]` |
+| Executive / risk acceptance | `[TBD]` | residual-risk and alternatives record | `[TBD]` | `[TBD]` |
+| Prohibited / redesign | `[TBD]` | rationale and permitted alternative | `[TBD]` | until policy change |
 
-## 7. Metrics and CTQs
+## 4. Governance service contract
 
-Define governance health metrics.
+### Intake
 
-| Metric | Purpose | Owner | Review cadence |
-|---|---|---|---|
-| AI system inventory completeness | confirms traceability | `[TBD]` | `[TBD]` |
-| release gate pass rate | tracks release quality | `[TBD]` | `[TBD]` |
-| incident recurrence rate | tracks control effectiveness | `[TBD]` | `[TBD]` |
-| open high-risk actions | tracks unresolved exposure | `[TBD]` | `[TBD]` |
-| time from intake to decision | tracks governance flow efficiency | `[TBD]` | `[TBD]` |
+- eligible requests:
+- minimum information:
+- incomplete-request handling:
+- routing owner:
+- expected first response:
+- sensitive-information boundary:
 
-## 8. Escalation Rules
+### Evidence
 
-Escalate when:
+- propositions requiring support:
+- accepted evidence types:
+- provenance and version fields:
+- freshness / invalidation rules:
+- reviewer qualification:
+- disagreement and adjudication:
+- storage, access, retention:
 
-- high-risk system lacks named owner
-- required release evidence is missing
-- incident severity exceeds threshold
-- model behavior materially deviates from validated behavior
-- legal, privacy, or safety concerns are unresolved
+### Decision
 
-## 9. Continuous Improvement Loop
+- outcomes:
+- decision authority and delegation:
+- quorum if applicable:
+- conditions, exceptions, and residual-risk semantics:
+- turnaround objective:
+- communication and effective date:
+- expiry and renewal:
 
-At each review cycle, capture:
+### Follow-through
 
-- what failed or slowed down
-- what evidence was missing
-- which controls were too weak or too heavy
-- what should be standardized
-- which templates, checklists, or approval rules need updates
+- action owner and due-date rules:
+- condition verification:
+- escalation and incident path:
+- rollback / stop authority:
+- closure evidence:
+- feedback into policy, controls, tools, and capacity:
 
-## 10. Open Decisions
+## 5. Forums
 
-| Decision | Owner | Due date | Status |
-|---|---|---|---|
-| `[TBD]` | `[TBD]` | `[TBD]` | `[open / decided]` |
+Create a forum only when a repeated decision requires joint authority or evidence.
+
+| Forum | Distinct decision right | Scope | Decision members | Evidence / challenge members | Pre-read contract | Outcomes | Service objective | Record / follow-through |
+|---|---|---|---|---|---|---|---|---|
+| `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` |
+
+Attendance does not equal approval. Record the authorized decision and any dissent explicitly.
+
+## 6. Ownership and assurance
+
+| Responsibility | Accountable role | Required authority | Evidence of operation | Backup / transfer rule |
+|---|---|---|---|---|
+| Product / use-case outcome | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` |
+| Technical system | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` |
+| Data | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` |
+| Model / platform / tool | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` |
+| Control operation | `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` |
+| Independent review | `[TBD]` | challenge / assurance, not delivery ownership | `[TBD]` | `[TBD]` |
+| Release / residual risk | `[TBD]` | `[TBD]` | decision record | `[TBD]` |
+| Incident and remediation | `[TBD]` | stop / contain / recover | exercises and incidents | `[TBD]` |
+| Redress / correction | `[TBD]` | correct outcome and downstream effect | case review | `[TBD]` |
+
+## 7. Lifecycle evidence
+
+| Stage | Decision | Minimum evidence | Hard gates | Follow-through |
+|---|---|---|---|---|
+| Intake | route / reject / request discovery | intended use, owner, preliminary context | prohibited use / missing owner as applicable | discovery owner and due date |
+| Discovery | continue / stop / redesign | user need, consequence model, feasibility uncertainty | non-negotiable constraints | evidence plan |
+| Pilot | enter bounded exposure | behavior contract, evaluation, controls, incident and stop path | defined by actual authority and harm | pilot conditions and expiry |
+| Expansion / release | expand / hold / roll back | pilot outcomes, slices, operations, residual risk | current hard gates | monitoring and invalidation triggers |
+| Operation | continue / adjust / pause / retire | outcomes, incidents, change, complaints, control health | stop triggers | remediation / renewal |
+| Retirement | decommission / transfer | dependency, data, memory, access, user-impact plan | retention and legal obligations | verification of removal |
+
+## 8. Exceptions and residual risk
+
+Define:
+
+- who may authorize deviation;
+- required rationale and alternatives;
+- scope and duration;
+- compensating controls;
+- monitoring and stop triggers;
+- expiry and renewal evidence;
+- where accepted residual risk is recorded;
+- when repeated exceptions trigger redesign.
+
+## 9. Metrics and review
+
+Do not optimize “approval rate” or “gate pass rate” without context.
+
+| Metric | Decision use | Owner | Interpretation / gaming risk | Review cadence |
+|---|---|---|---|---|
+| time waiting for evidence | capacity and requirement redesign | `[TBD]` | excludes requester delay? | `[TBD]` |
+| rework caused by unclear intake or evidence rules | improve service contract | `[TBD]` | requires cause coding | `[TBD]` |
+| decisions after useful-by date | authority and capacity issue | `[TBD]` | distinguish deliberate defer | `[TBD]` |
+| expired conditions / exceptions | control follow-through | `[TBD]` | stale records may distort | `[TBD]` |
+| incidents and recurrence by control path | control effectiveness | `[TBD]` | reporting culture affects count | `[TBD]` |
+| decisions invalidated by untracked change | change-control quality | `[TBD]` | detection improves count initially | `[TBD]` |
+| duplicate / low-value reviews | remove governance burden | `[TBD]` | qualitative review required | `[TBD]` |
+
+## 10. Improvement review
+
+For selected real cases, ask:
+
+- Was the decision made at the correct level and in time to matter?
+- Was the evidence decision-relevant, current, and reusable?
+- Which uncertainty or dissent was hidden?
+- Which control failed or created false assurance?
+- Which exception repeated?
+- Which users, affected groups, or incidents were invisible?
+- Which forum, artifact, or review could be removed?
+- What policy, tooling, staffing, or ownership change follows?
+
+## 11. Open design decisions
+
+| Decision | Owner | Evidence needed | Due | Status |
+|---|---|---|---|---|
+| `[TBD]` | `[TBD]` | `[TBD]` | `[TBD]` | open / decided / deferred |
